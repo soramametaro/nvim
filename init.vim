@@ -53,12 +53,18 @@ endfunction
 command! Crun call Crun()
 noremap <space>gcc :Crun<CR>
 
-"C++ファイルでGLUTをコンパイル実行する
+"C++ファイルでGLUTをコンパイルする
+"windows用
+"function! Cppglutrun()   
+"  :w
+"  :!g++ -Wall -Weffc++ -o %:r.out % -lglut -lGLU -lGL
+"endfunction
+"mac用
 function! Cppglutrun()   
   :w
-  :!g++ -Wall -Weffc++ -o %:r.out % -lglut -lGLU -lGL
-"  :!./%:r.out
+  :!g++ % -framework OpenGL -framework GLUT -DGL_SILENCE_DEPRECATION -o %:r.out
 endfunction
+
 
 command! Cppglutrun call Cppglutrun()
 noremap <space>gl :Cppglutrun<CR>

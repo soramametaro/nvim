@@ -38,6 +38,7 @@ set clipboard+=unnamedplus " クリップボードにコピーできるように
 set backspace=indent,eol,start " backspaceで様々な文字を消せるようにする(デフォルトだと改行文字などはbackspaceで削除できない)
 set hidden " タブを切り替えるときに保存していなくてもOKにする
 set textwidth=0 "自動改行する文字数
+set mouse=a "マウス操作をできるようにする"
 
 " ######################## ログ ########################
 set history=500 "保持するコマンド履歴の数
