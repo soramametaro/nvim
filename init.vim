@@ -79,3 +79,4 @@ noremap <space>lfd :LaunchFileDebug<CR>
 
 "vscodeに似たキー配置(若干違う)
 let g:vimspector_enable_mappings = 'HUMAN'
+
