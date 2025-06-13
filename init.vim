@@ -33,7 +33,7 @@ function! Cpprun()
 endfunction
 
 command! Cpprun call Cpprun()
-noremap <space>g++ :Cpprun<CR>
+noremap <space>g :Cpprun<CR>
 
 "Pythonを実行してくれる関数
 function! Pythonrun()   
