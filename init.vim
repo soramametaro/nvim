@@ -26,7 +26,7 @@ runtime! dein.vim
 " シンタックスハイライトをONにする
 syntax enable
 
-"C++をいい感じにコンパイル実行してくれる関数
+"C++をいい感じにコンパイルしてくれる関数
 function! Cpprun()   
   :w
   :!g++ % -o %:r.out
@@ -34,6 +34,15 @@ endfunction
 
 command! Cpprun call Cpprun()
 noremap <space>g :Cpprun<CR>
+
+"C++をいい感じにコンパイルしてくれる関数
+function! Cppout()   
+  :!./ %:r.out
+endfunction
+
+command! Cppout call Cppout()
+noremap <space>m :Cppout<CR>
+
 
 "Pythonを実行してくれる関数
 function! Pythonrun()   
@@ -80,3 +89,10 @@ noremap <space>lfd :LaunchFileDebug<CR>
 "vscodeに似たキー配置(若干違う)
 let g:vimspector_enable_mappings = 'HUMAN'
 
+" VSCode内かどうかの分岐
+if exists('g:vscode')
+  " <Space>df で VSCode の定義へ移動
+  nnoremap <silent> <Space>df <Cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
+  " ついでにプレビュー派なら
+  nnoremap <silent> <Space>dp <Cmd>call VSCodeNotify('editor.action.peekDefinition')<CR>
+endif
