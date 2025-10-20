@@ -29,7 +29,7 @@ syntax enable
 "C++をいい感じにコンパイルしてくれる関数
 function! Cpprun()   
   :w
-  :!g++ % -o %:r.out
+  :!g++ -std=c++17 % -o %:r.out
 endfunction
 
 command! Cpprun call Cpprun()
