@@ -34,3 +34,10 @@ vnoremap k gk
 " tabキーと shift+tabキーで補完候補を選択できる
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" Dでヤンクしない削除
+nnoremap D "_d
+" ビジュアルモード中のヤンクされない削除
+nnoremap X "_x
+
+
