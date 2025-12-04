@@ -35,6 +35,6 @@ vnoremap k gk
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
-" Dでヤンクしない削除
-nnoremap D "_d
+" スペースdでヤンクしない削除
+nnoremap <Leader>d "_dd
 
