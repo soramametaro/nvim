@@ -37,7 +37,4 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 " Dでヤンクしない削除
 nnoremap D "_d
-" ビジュアルモード中のヤンクされない削除
-nnoremap X "_x
-
 
