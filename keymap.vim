@@ -38,3 +38,10 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 " スペースdでヤンクしない削除
 nnoremap <Leader>d "_dd
 
+" Python ファイルで <leader>f を押すと autopep8 で整形
+if executable('autopep8')
+  augroup autopep8_format
+    autocmd!
+    autocmd FileType python nnoremap <buffer> <leader>fmt :silent %!autopep8 -<CR>
+  augroup END
+endif
